@@ -1,0 +1,181 @@
+body{
+	width:100vw;
+	min-height:100vh;
+	display:flex;
+	justify-content:flex-start;
+	flex-flow:colum nowrap;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	background-color: rgba(black , .9);
+	background-image: url(../img/textura.png);
+	background-repeat: repeat;
+	overflow-x:hidden;
+
+
+
+	@include hasta(web){
+		padding:0 1em 0 2em;
+		margin:0;
+	}
+}
+
+.cabecera{
+	display:flex;
+	justify-content:center;
+	align-items:flex-start;
+	display:flex;
+	justify-content:center;
+	flex-flow: column nowrap;
+	flex-direction:column;
+	align-items:center;
+	width:100%;
+
+	img{
+
+		@include hasta(web) {
+			border-radius: 15px;
+		}
+
+
+	}
+}
+
+
+
+
+
+/*
+*
+*                                  FORMULARIO
+*
+*/
+
+
+
+.formulario{
+	background-color:#464649;
+	background-image: url(../img/textura.png);
+	background-repeat: repeat;
+	width:350px;
+	border-radius:15px;
+	position:absolute;
+	right:0;
+	padding:.5em;
+	text-align:center;
+	top:0;
+	margin-right:5vw;
+	margin-top:1em;
+
+	@include hasta(web) {
+		position:relative;
+		left:0;
+		right: 0;
+		margin: auto;
+		width: 100%;
+		padding: 2em;;
+	}
+
+
+	hgroup{
+		h1{
+			color:white;
+			margin:.3em 0 0;
+		}
+		h2{
+			color:white;
+			font-weight: 400;
+			margin:  0;
+		}
+		span{
+			color:yellow;
+			font-size: 3rem;
+			font-weight: 700;
+			margin: 0;
+			line-height: 1;
+		}
+	}
+
+	&--campos{
+		width: 100%;
+		display:flex;
+
+		form{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			flex-flow: column nowrap;
+
+
+			input,
+			textarea,
+			button{
+				border-radius: 5px;
+				padding:.5em;
+				margin: .3em;
+				font-size: .8em;
+			}
+			textarea{
+				height: 8em;
+				background-image: url('../img/icon_comentario.png');
+				background-position: 98% 10%;
+  				background-position-x: calc(100% - 2%);
+  				background-position-y: calc(100% - 95%);
+    			background-repeat: no-repeat;
+			}
+			input[type=text] {
+				background-image: url('../img/icon_nombre.png');
+				background-position: calc(100% - 2%);
+    			background-repeat: no-repeat;
+
+			}
+			input[type=number]{
+				background-image: url('../img/icon_telefono.png');
+				background-position: calc(100% - 2%);
+    			background-repeat: no-repeat;
+
+			}
+			input[type=email]{
+				background-image: url('../img/icon_email.png');
+				background-position: calc(100% - 2%);
+    			background-repeat: no-repeat;
+
+			}
+			button{
+				background-color:red;
+				color:white;
+				font-size: 1.5em;
+				transition: all .5s;
+				font-weight: 700;
+			}
+			button:hover{
+				background-color:green;
+				transition: all .5s;
+			}
+			p{
+				color:#eee;
+				line-height: 1;
+				font-size: .8em;
+			}
+
+			.telefonos{
+				display: flex;
+				flex-flow: row nowrap;
+
+				.cod{
+					width: 35%;
+				}
+				.telefono{
+					width: 65%;
+				}
+			}
+		}
+	}
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+  input[type=number] {
+    -moz-appearance:textfield;
+}

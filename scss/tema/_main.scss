@@ -1,0 +1,390 @@
+/*
+*
+*                       empieza el articulo
+*
+*/
+
+
+.flex{
+	display:flex;
+	justify-content:center;
+	flex-flow: column nowrap;
+	flex-direction:column;
+	align-items:center;
+
+
+	&-container{
+		background-color:white;
+		display:flex;
+		max-width: 997px;
+		justify-content: flex-start;
+		flex-flow: column nowrap;
+
+
+		&-parrafo{
+			max-width: 60%;
+			padding: 1.5em;
+
+
+			@include hasta(web){
+				max-width: 100%;
+			}
+
+			span{
+				color:red;
+				font-weight: 700;
+			}
+		}
+
+		&-total{
+			padding:1.5em;
+
+
+			span{
+				font-weight: 700;
+				font-size: 1.5em;
+			}
+		}
+
+		&-porcentaje{
+			display:flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			padding:1.5em;
+
+			&-texto{
+				max-width: 65%;
+
+				@include hasta(web){
+					max-width: 100%;
+				}
+
+				h2{
+					color:red;
+				}
+				span{
+					font-weight: 700;
+					font-size: 1.2em;
+				}
+			}
+
+			&-imagen{
+				align-self:center;
+				max-width: 35%;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: center;
+				align-items: center;
+
+				img{
+					border-radius: 15px;
+				}
+			}
+		}
+	}
+}
+
+/*
+*
+*                        fin de articulo
+*
+*/
+
+
+
+
+
+
+.flex-beneficios,
+.flex-resultados{
+	display:flex;
+	justify-content:center;
+	flex-flow: column nowrap;
+	flex-direction:column;
+	align-items:center;
+	width:100%;
+}
+
+.flex-resultados-background{
+	background-color:white;
+	width:100%;
+	max-width:997px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-flow:column nowrap;
+	flex:auto;
+
+}
+.flex-resultados-contenido{
+	width:100%;
+	text-align:center;
+
+	p{
+		text-align: left;
+		padding:1.7em;
+	}
+	
+}
+
+.flex-resultados-imagenes{
+	display:flex;
+	width:100%;
+	justify-content:space-around;
+	text-align:center;
+	flex-flow: row nowrap;
+	p{
+		color:red;
+	}
+
+	@include hasta(tablet){
+		display: block;
+	}
+}
+.flex-banner{
+	margin-top:1.6em;
+	max-width:100%;
+}
+.flex-pasos{
+	display:flex;
+	flex-flow: row nowrap;
+	width:100%;
+	justify-content:space-around;
+	text-align:center;
+	align-items:strech;
+	margin-bottom:2em;
+
+	@include hasta(tablet) {
+	flex-flow: column nowrap;
+
+	}
+
+	.pasos1,
+	.pasos2,
+	.pasos3{
+		margin: .5em;
+		flex:33.3333333333%;
+		padding:.8em;
+		display:flex;
+		flex-flow: column nowrap;
+		align-self:strech;
+		border-bottom: 2px solid red;
+
+
+		h2{
+			color:red;
+		}
+		span{
+			font-size: 2.5rem;
+		}
+		p{
+			padding:.5em;
+			border-top: 2px solid red;
+			align-self:strech;
+			min-height: 100%;
+		}
+	}
+}
+
+/*
+*
+*  estilos de footer flexbox 
+*
+*/
+
+
+
+
+.flex-footer{
+	width:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-flow: column nowrap;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	position: relative;
+	align-self: flex-end;
+
+	.formulario-footer{
+		position:absolute;
+		top:0;
+		right: 0;
+		left:0;
+		right: 25%;
+		left:25%;
+		margin: auto;
+		background-color: #e2e3e5;
+		max-width: 498.5px;
+
+		@include hasta(web) {
+
+			position:relative;
+			top:0;
+			right: 0;
+			left:0;
+			margin: auto;
+			min-width: 100%;
+
+		}
+
+		form{
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items:center;
+
+			p{
+				text-align: center;
+				width: 100%;
+				color:green;
+				font-weight: 700;
+				background-color: #f1f2eb;
+				padding: .5em 0;
+			}
+			
+			.formulario-footer1,
+			.formulario-footer2,
+			.formulario-footer3,
+			.formulario-footer4,
+			.formulario-footer5{
+				width: 100%;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				align-items:center;
+				padding: .5em 1.5em;
+				
+				input,
+				textarea{
+					width: 75%;
+				}
+			}
+
+
+
+			.formulario-footer4-cod,
+			.formulario-footer4-tel{
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				align-items:center;
+
+			}
+			.formulario-footer4-cod{
+				min-width: 45%;
+
+				input{
+					width: 41%;
+					margin-right: .8em;
+				}
+			}
+			.formulario-footer4-tel{
+				min-width: 55%;
+
+				input{
+					width: 70%;
+				}
+			}
+			.formulario-footer5{
+				
+
+				label{
+					align-self:flex-start;
+				}
+			
+			}
+		}
+
+		button{
+			padding: .5em 1em;
+			margin-bottom: 2em;
+			align-self:flex-start;
+			margin-left: 8.5em;
+			border-radius: 5px;
+			background-color:#eee;
+		}
+
+
+		input,
+		label,
+		textarea{
+			border-radius:5px;
+		}
+
+
+
+		input,
+		textarea{
+			padding:.5em;
+			margin: .3em;
+			font-size: .8em;
+		}
+		textarea{
+			height: 8em;
+			background-image: url('../img/icon_comentario.png');
+			background-position: 98% 10%;
+			background-position-x: calc(100% - 2%);
+			background-position-y: calc(100% - 95%);
+			background-repeat: no-repeat;
+		}
+		input[type=text] {
+			background-image: url('../img/icon_nombre.png');
+			background-position: calc(100% - 2%);
+			background-repeat: no-repeat;
+
+		}
+		.telefono{
+			background-image: url('../img/icon_telefono.png');
+			background-position: calc(100% - 2%);
+			background-repeat: no-repeat;
+
+		}
+		input[type=email]{
+			background-image: url('../img/icon_email.png');
+			background-position: calc(100% - 2%);
+			background-repeat: no-repeat;
+
+		}
+	}
+}
+
+/*
+*
+*
+*                 clases para gracias
+*
+*/
+
+.footer-gracias{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-flow: column nowrap;
+	width:100%;
+	align-self:flex-end;
+
+	&-contenido{
+		flex:auto;
+		width: 100%;
+		max-width: 800px;
+		background-color: rgba(black, .5);
+		min-height:8em;
+		align-self:center;
+		color:white;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		flex-flow: column nowrap;
+		text-align: center;	
+
+
+		p{
+			align-self:center;
+			width: 100%;
+		}
+	}
+}
+.gracias-img{
+	max-width:800px;
+}
